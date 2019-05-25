@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hua.dao.UserDao">
+
+    <insert id="addUser" parameterType="com.hua.entity.User">
+        insert into  hua_user(name,age) values (#{name},#{age})
+    </insert>
+
+    <select id="getAll" resultType="com.hua.entity.User">
+        select  * from hua_user
+    </select>
+
+</mapper>
